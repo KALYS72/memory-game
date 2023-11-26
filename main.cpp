@@ -18,6 +18,12 @@ int main() {
     int a, n, win=0, attempts=0; 
     cout << "Welcome to the Memory Game!" << endl << "Enter the size of an array (6-20): ";
     cin >> a;
+    if(a % 2 != 0 || a < 6 || a > 20) {
+        while (a % 2 != 0 || a < 6 || a > 20) {
+            cout << "Your number is incorrect! write another: ";
+            cin >> a;
+        }
+    }
     int quiz[a];
     string numbers[a];
     n = (a/2);
